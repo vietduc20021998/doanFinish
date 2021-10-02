@@ -1,0 +1,230 @@
+@import 'assets/mixin.scss';
+
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(8, 8, 8); 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #000000; 
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+.grid__container {
+  margin: 0 10%;
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-gap: 10px;
+  padding: 10px;
+  background-color: #FDFCF0;
+
+  @include ipadpro {
+    margin: 0;
+    background-color: #FDFCF0;
+  }
+
+  .format__chooseFilm  {
+    grid-column-start: 1;
+    grid-column-end: 2;
+    width: 100%;
+
+    .theater__list__scroll {
+      width: 100%;
+      height: 500px;
+      overflow: auto;
+
+      @include ipadpro {
+        height: 700px;
+      }
+    
+      .theater__list__point {
+        cursor: pointer;
+        opacity: .6;
+      
+        .theater__logo__list {
+          width: 100px;
+          height: 100px;
+          margin-right: 10px;
+
+          @include ipadpro {
+            width: 100px;
+            height: 100px;
+          }
+        }
+      }
+
+      .theater__list-hover {
+        opacity: 1;
+        padding: 0 5px 5px 0;
+      }
+    
+      .theater__list-font {
+        color: #b30000;
+        width: 300px;
+
+        @include ipadpro {
+          font-size: 25px;
+        }
+      }
+
+      .theater__list-font-diaChi {
+        @include ipadpro {
+          font-size: 20px;
+        }
+      }
+    }
+  }
+
+  .format__chooseSchedule {
+    grid-column-start: 2;
+    grid-column-end: 3;
+    width: 100%;
+
+    .theater__list__scroll {
+      width: 100%;
+      height: 500px;
+      overflow: auto;
+      overflow-x: hidden;
+
+      @include ipadpro {
+        height: 700px;
+      }
+      
+      .theater__list-allFilm {
+        margin-bottom: 100px;
+
+        @include ipadpro {
+          display: block;
+        }
+
+        .theater__list__pic {
+          width: 150px;
+          height: 200px;
+
+          @include ipadpro {
+            margin-bottom: 220px;
+          }
+  
+          .theater__list-picFormat {
+            border: 3px solid #000;
+            
+            @include ipadpro {
+              margin-left: 25px;
+              display: block;
+              width: 300px;
+              height: 400px;
+            }
+          }
+        }
+  
+        .theater__list-schedule {
+          flex-wrap: wrap;
+  
+          .theater__list__word {
+            color: #b30000;
+            font-size: 30px;
+            font-weight: 500;
+            margin-left: 25px;
+
+            @include ipadpro {
+              font-size: 40px;
+            }
+          }
+  
+          .theater__list-lichChieu {
+            font-size: 20px;
+            font-weight: 500;
+            margin-bottom: 10px;
+            margin-left: 25px;
+
+            @include ipadpro {
+              font-size: 30px;
+            }
+          }
+  
+          .theater__list__date {
+            flex-wrap: wrap;
+            margin-left: 25px;
+
+            @include ipadpro {
+              width: 350px;
+              font-size: 25px;
+            }
+  
+            .theater__list-button {
+              text-align: right;
+              box-shadow: 1px 1px #000;
+              outline-color: rgb(255, 255, 255);
+              border: 1px;
+              border-radius: 5px;
+              padding: 0 5px;
+              color: #fff;
+              background-color: red;
+              margin: 0 10px 10px 0;
+            }
+  
+            .theater__list-button:hover {
+              background-color: rgb(2, 2, 2);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .grid__item__1 {
+    grid-column-start: 1;
+    grid-column-end: 3;
+    border-bottom: 3px double #000;
+
+    .theater__logo {
+      text-align: center;
+      width: 10%;
+      font-weight: 500;
+      margin-right: 25px;
+
+      @include ipadpro {
+        width: 20%;
+      }
+
+      .theater__name {
+        font-size: 1.5em;
+      }
+    
+      .theater__logo__format {
+        padding: 5px;
+        opacity: .6;
+        cursor: pointer;
+      }
+
+      .theater__logo-hover {
+        box-shadow: 2px 2px rgb(255, 1, 1);
+        padding: 0 5px 5px 0;
+        opacity: 1;
+      }
+    }
+  }
+
+  & > div {
+    background-color: rgba(255, 255, 255, 1);
+    text-align: left;
+    padding: 20px 20px;
+  }
+}

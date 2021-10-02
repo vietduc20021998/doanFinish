@@ -1,0 +1,130 @@
+@import 'assets/mixin.scss';
+
+img {
+  display: block;
+  width: 100%;
+}
+.header__format-all {
+  position: fixed;
+  top: 0px; 
+  background-color: #FDFCF0;
+  z-index: 3000;
+  width: 100%;
+
+  @include ipadpro {
+    position: unset;
+  }
+
+  .header {
+    font-size: 12px;
+    font-weight: 500;
+  
+    @include ipadpro {
+      font-size: 20px;
+    }
+  
+    .text-right {
+      margin: 5px 0;
+
+      & h6 {
+        padding-top: 2px;
+      }
+
+      .top__header {
+        color: #000!important;
+        margin-right: 10px;
+      }
+      .header__format-button {
+        display: block;
+        box-shadow: 1px 1px #000;
+        border: 1px;
+        border-radius: 5px;
+        padding: 0 5px;
+        color: #fff;
+        background-color: rgb(0, 0, 0);
+        height: 25px;
+      }
+    }
+  }
+  
+  .bg__color {
+    background-image: url(../../../assets/img/bg-header.png);
+    // margin-bottom: 20px;
+    border-top: 7px solid red;
+    border-bottom: 7px solid red;
+    background-color: #fdf7dd;
+  
+    .bg__logo {
+      display: block;
+      width: 100px;
+      height: 100px;
+    }
+  
+    .bg__nav__font {
+      font-size: 17px;
+      font-weight: 500;
+      text-transform: uppercase;
+  
+      @include ipadpro {
+        font-size: 20px;
+      }
+  
+      .bg__dropdown {
+        background-color: #353535;
+  
+        .haha {
+          border: 1px solid #fff;
+          margin: 2px 5px;
+    
+          & > .dropdown-item {
+            color: #fff;
+          }
+  
+        }
+      }
+    }
+  
+    .total__format {
+      padding-bottom: 5px;
+      display: flex;
+      justify-content: center;
+      // position: fixed;
+      // z-index: 2000;
+    
+      & > div:nth-child(4) {
+        border-right: none;
+      }
+    
+      .total__format__div {
+        border-right: 1px solid #000;
+        padding-right: 30px;
+        padding-left: 30px;
+    
+        .pic__1 {
+          width: 10vh;
+          height: 10vh;
+          cursor: pointer;
+      
+          .pic__format {
+            border: 1px solid #000;
+            border-radius: 20%;
+          }
+      
+        }
+        .pic__text {
+          font-size: 12px;
+          font-weight: 500;
+          text-align: center;
+          margin-top: 10px;
+    
+          @include ipadpro {
+            font-size: 20px;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+

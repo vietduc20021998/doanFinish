@@ -1,0 +1,54 @@
+@import 'assets/mixin.scss';
+
+.login {
+  margin-top: 25vh;
+  text-align: -webkit-center;
+
+  @include ipadpro {
+    margin-top: 1vh;
+  }
+
+  .login__form {
+    margin: 20px 100px;
+    width: 500px;
+
+    .login__form-input {
+      margin-bottom: 10px;
+      box-shadow: 1px 1px #000;
+      border-radius: 3px;
+      width: 500px;
+
+      @include ipadpro {
+        font-size: 25px;
+      }
+    }
+
+    .form-text.text-muted {
+      text-align: left;
+    }
+
+    .login__form-button {
+      display: block;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      box-shadow: 1px 1px #000;
+      outline-color: rgb(255, 255, 255);
+      border: 1px;
+      border-radius: 5px;
+      padding: 0 5px;
+      color: #fff;
+      background-color: red;
+      width: 500px;
+
+      @include ipadpro {
+        font-size: 25px;
+      }
+    }
+
+    .login__form-p {
+      @include ipadpro {
+        font-size: 25px;
+      }
+    }
+  }
+}

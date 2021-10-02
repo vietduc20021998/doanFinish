@@ -1,0 +1,1 @@
+export const FETCH_DETAIL_MOVIE = '[user]: FETCH_DETAIL_MOVIE'

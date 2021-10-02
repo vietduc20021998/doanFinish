@@ -1,0 +1,194 @@
+@import 'assets/mixin.scss';
+
+img {
+  display: block;
+  width: 100%;
+}
+
+.format__allSeat {
+  margin-top: 25vh;
+
+  @include ipadpro {
+    margin-top: 1vh;
+    flex-direction: column;
+  }
+
+  .col-lg-8 {
+    @include ipadpro {
+      max-width: 100%;
+      margin-bottom: 20px;
+    }
+
+    .booking__seat {
+      text-align: center;
+      border: 1px solid #000;
+      border-radius: 10px;
+      padding: 10px;
+      margin: 0 20px;
+  
+      @include ipadpro {
+        width: 100%;
+        margin: 0;
+      }
+    
+      .booking__screen{
+        background-color: red;  
+        color: #fff;
+        border-radius: 10px;
+        margin: 0 60px 30px 60px;
+      }
+    
+      .seat__format {
+        box-shadow: 1px 1px #000;
+        border-radius: 5px;
+        cursor: pointer;
+
+        .MuiButton-root {
+          @include ipadpro {
+            min-width: 55px;
+          }
+        }
+      }
+    }
+  }
+
+  .col-lg-4 {
+    @include ipadpro {
+      max-width: 100%;
+    }
+  
+    .booking__text {
+      margin-right: 50px;
+      border: 1px solid #000;
+      border-radius: 10px;
+      padding: 10px;
+      width: 100%;
+      
+      .booking__img {
+        width: 150px;
+        height: 204px;
+        
+        & > img {
+          border: 5px solid #000;
+          border-radius: 5px;
+        }
+      }
+
+      .booking__text-infor {
+        h3 {
+          text-transform: uppercase;
+          @include ipadpro {
+            font-size: 40px;
+          }
+        }
+
+        h5 {
+          @include ipadpro {
+            font-size: 30px;
+          }
+        }
+
+        p {
+          @include ipadpro {
+            font-size: 20px;
+          }
+        }
+
+        hr.booking__border-hr {
+          border: 1px solid #000;
+
+          @include ipadpro {
+            width: 59vh;
+          }
+        }
+      }
+    }
+    
+    .booking__text-ing {
+      margin-right: 50px;
+      margin-top: 20px;
+      border: 1px solid #000;
+      border-radius: 10px;
+      padding: 10px;
+      width: 100%;
+
+      h4 {
+        @include ipadpro {
+          font-size: 30px;   
+        }
+
+        & > span {
+          @include ipadpro {
+            text-decoration: underline;
+          }
+        }
+      }
+    
+      .booking__text-reserved {
+        display: flex;
+        flex-wrap: wrap;
+
+        @include ipadpro {
+          font-size: 25px;   
+        }
+    
+        & > span {
+          border: 1px solid #000;
+          border-radius: 5px;
+          padding: 0 5px;
+          color: #fff;
+          background-color: #000;
+        }
+      }
+    
+      hr.booking__border-hr {
+        border: 1px solid #000;
+      }
+    
+      .booking__format-button {
+        display: block;
+        margin-left: auto;
+        text-align: right;
+        margin-top: 10px;
+        box-shadow: 1px 1px #000;
+        outline-color: rgb(255, 255, 255);
+        border: 1px;
+        border-radius: 5px;
+        padding: 0 5px;
+        color: #fff;
+        background-color: red;
+
+        @include ipadpro {
+          font-size: 30px;   
+        }
+      }
+    }
+  }
+}
+
+.isChoosing {
+  cursor: pointer;
+  .MuiButtonBase-root.MuiButton-root.MuiButton-contained {
+    background-color: red;
+  }
+}
+
+.daDat {
+  cursor: no-drop;
+  .MuiButtonBase-root.MuiButton-root.MuiButton-contained {
+    background-color: #000;
+    cursor: no-drop;
+  }
+}
+
+.Thuong {
+  .MuiButton-contained {
+    background-color: rgb(145, 145, 145);
+  }
+}
+
+.Vip {
+  .MuiButton-contained {
+    background-color: rgb(235, 119, 11);
+  }
+}

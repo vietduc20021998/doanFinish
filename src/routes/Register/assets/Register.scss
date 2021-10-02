@@ -1,0 +1,57 @@
+@import 'assets/mixin.scss';
+
+.form-text.text-muted {
+  color: red!important;
+}
+.register {
+  margin-top: 25vh;
+  text-align: -webkit-center;
+
+  @include ipadpro {
+    margin-top: 1vh;
+  }
+
+  .register__form {
+    margin: 20px 100px;
+    width: 500px;
+
+    .register__form-input {
+      margin-bottom: 10px;
+      box-shadow: 1px 1px #000;
+      border-radius: 3px;
+      width: 500px;
+
+      @include ipadpro {
+        font-size: 25px;
+      }
+    }
+
+    .form-text.text-muted {
+      text-align: left;
+    }
+
+    .register__form-button {
+      display: block;
+      margin-top: 10px;
+      margin-bottom: 10px;
+      box-shadow: 1px 1px #000;
+      outline-color: rgb(255, 255, 255);
+      border: 1px;
+      border-radius: 5px;
+      padding: 0 5px;
+      color: #fff;
+      background-color: red;
+      width: 500px;
+
+      @include ipadpro {
+        font-size: 25px;
+      }
+    }
+
+    .register__form-p {
+      @include ipadpro {
+        font-size: 25px;
+      }
+    }
+  }
+}

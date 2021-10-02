@@ -1,0 +1,8 @@
+@import 'assets/mixin.scss';
+
+.routers__format {
+  margin-top: 25vh;
+  @include ipadpro {
+    margin-top: 0;
+  }
+}

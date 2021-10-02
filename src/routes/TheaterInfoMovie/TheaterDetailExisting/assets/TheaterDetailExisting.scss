@@ -1,0 +1,184 @@
+@import 'assets/mixin.scss';
+
+/* width */
+::-webkit-scrollbar {
+  width: 7px;
+  height: 7px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 10px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(8, 8, 8); 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #000000; 
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+hr.border-hr {
+  border: 2px solid #000;
+}
+
+.theater__detail-existing {
+  margin-right: 10vh;
+  margin-left: 10vh;
+  margin-top: 25vh;
+
+  @include ipadpro {
+    margin-right: 5vh;
+    margin-left: 5vh;
+    margin-top: 0;
+  }
+
+  .movie {
+
+    .movie__format__button {
+      box-shadow: 1px 1px #000;
+      outline-color: rgb(255, 255, 255);
+      border: 1px;
+      border-radius: 5px;
+      padding: 0 5px;
+      color: #fff;
+      background-color: red;
+
+      @include ipadpro {
+        font-size: 20px;
+      }
+
+      a {
+        text-decoration: none;
+        color: #fff;
+      }
+    }
+
+    .movie__pic {
+      width: 25%;
+      text-align: center;
+      
+      @include ipadpro {
+        height: 25vh;
+      }
+    }
+
+    p {
+      font-size: 20px;
+    }
+  
+    .movie__text {
+      text-transform: uppercase;
+    }
+  
+    .movie__theater {
+      border-bottom: 1px solid #000;
+      padding-bottom: 20px;
+      
+      .movie__theaterLogo {
+        cursor: pointer;
+        width: 140px;
+        height: 140px;
+        margin: 0 10px;
+        opacity: .8;
+      }
+  
+      .active__hover {
+        box-shadow: 2px 2px rgb(255, 1, 1);
+        padding: 0 5px 5px 0;
+        opacity: 1;
+      }
+    }
+  
+    .movie__addressScroll {
+      width: 100%;
+      overflow: auto;
+  
+      .movie__addressScroll__button {
+        margin-right: 10px;
+        white-space: nowrap;
+        background-color: red;
+        color: white;
+        border-radius: 5px;
+        padding: 0 5px 0 5px;
+        box-shadow: 1px 1px #000;
+      }
+  
+      .movie__addressScroll__button:hover {
+        background-color: #000;
+      }
+  
+      .duck{
+        opacity: 0.5;
+      }
+  
+      .actHover {
+        opacity: 1;
+      }
+  
+      .movie__addressLogo {
+        width: 70px;
+        height: 70px;
+        margin-bottom: 10px;
+      }
+    }
+  
+    .movie__time {
+      width: 100%;
+      flex-wrap: wrap;
+      
+      .movie__time-row {
+        width: 50%;
+        line-height: 1;
+        margin-bottom: 20px;
+        padding-bottom: 10px;
+        border-bottom: 1px solid black;
+        border-left: 1px solid black;
+
+        @include ipadpro {
+          margin: 0 0 20px 0;
+        }
+  
+        .movie__time-pic {
+          width: 100px;
+          height: 190px;
+
+          @include ipadpro {
+            width: 100px;
+            height: 100px;
+            padding: 0 0 0 15px;
+          }
+        }
+
+  
+        .movie__time-button {
+          margin-right: 10px;
+          background-color: red;
+          color: white;
+          border-radius: 5px;
+          padding: 3px 7px 3px 7px;
+          box-shadow: 1px 1px #000;
+
+          @include ipadpro {
+            font-size: 20px;
+          }
+        }
+        .movie__time-button:hover {
+          background-color: #000;
+        }
+  
+      }
+    }
+    
+  }
+}
