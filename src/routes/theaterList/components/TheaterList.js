@@ -1,18 +1,23 @@
 import React, { useState } from 'react'
 import { useHistory } from 'react-router'
+import { useSelector } from 'react-redux'
 import moment from 'moment'
 import '../assets/theaterList.scss'
 
 export default function TheaterList({ logoCinema, listCinema, movieCinema, getListCinema, getMovieCinema }) {
   const history = useHistory()
   const [state, setState] = useState('bhd-star-cineplex-bitexco')
-  
+
+  const theaters = ['bhd-star-cineplex-bitexco', 'cgv-aeon-binh-tan', 'cns-hai-ba-trung', 'glx-kinh-duong-vuong', 'lotte-cantavil', 'megags-cao-thang']
+
+  const user = useSelector(state => state.user.credential)
+
   const getMovie = (maCumRap, maHeThongRap) => {
     setState(maHeThongRap)
     getMovieCinema(maCumRap)
   }
-  
-  const [logoHover, setLogoHover] = useState('')
+
+  const [logoHover, setLogoHover] = useState('BHDStar')
 
   const getHover = (maHeThongRap) => {
     getListCinema(maHeThongRap)
@@ -23,7 +28,7 @@ export default function TheaterList({ logoCinema, listCinema, movieCinema, getLi
     <div id="cumRap" className="grid__container">
       <div className="grid__item__1 d-flex justify-content-center mt-5">
         {
-          logoCinema.map((item,index) => (
+          logoCinema.map((item, index) => (
             <div key={index} className="theater__logo">
               <div>
                 <img
@@ -38,13 +43,13 @@ export default function TheaterList({ logoCinema, listCinema, movieCinema, getLi
         }
       </div>
       <div className="format__chooseFilm">
-        <h2 className="text-center mb-3">Chọn Rạp</h2>
+        <h2 className="format__chooseFilm-h2 text-center mb-3">Chọn Rạp</h2>
         <div className="theater__list__scroll">
           {
-            listCinema.map((item,index) => (
+            listCinema.map((item, index) => (
               <div key={index}>
                 {
-                  item.lstCumRap.map((item1,index) => (
+                  item.lstCumRap.map((item1, index) => (
                     <div
                       className={`theater__list__point ${item1.maCumRap === state ? 'theater__list-hover' : ''}`}
                       key={index}
@@ -67,14 +72,14 @@ export default function TheaterList({ logoCinema, listCinema, movieCinema, getLi
         </div>
       </div>
       <div className="format__chooseSchedule">
-        <h2 className="text-center mb-3">Chọn Lịch Chiếu</h2>
+        <h2 className="format__chooseSchedule-h2 text-center mb-3">Chọn Lịch Chiếu</h2>
         <div className="theater__list__scroll">
           {
             // eslint-disable-next-line array-callback-return
             movieCinema.map(item => {
               if (item.maCumRap === state) {
                 return (
-                  item.danhSachPhim.map((item1,index) => {
+                  item.danhSachPhim.map((item1, index) => {
                     return (
                       <div key={index} className="theater__list-allFilm row">
                         <div className="col-lg-3 theater__list__pic">
@@ -88,7 +93,7 @@ export default function TheaterList({ logoCinema, listCinema, movieCinema, getLi
                               item1.lstLichChieuTheoPhim.map((item2, index) => (
                                 <div key={index}>
                                   <button
-                                    onClick={() => { history.push(`/${item2.maLichChieu}/chiTietPhongVe`) }}
+                                    onClick={() => { (user.accessToken) ? history.push(`/${item2.maLichChieu}/chiTietPhongVe`) : history.push(`/Login`) }}
                                     className="theater__list-button"
                                   >
                                     {moment(item2.ngayChieuGioChieu).format('DD/MM')} - {moment(item2.ngayChieuGioChieu).format('HH:mm')}

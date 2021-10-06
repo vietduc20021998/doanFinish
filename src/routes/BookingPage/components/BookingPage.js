@@ -43,7 +43,7 @@ export default function BookingPage({ movieBookingPage, movieSeat, total, reserv
         </div>
         <div className="col-lg-4">
           <div className=" d-flex booking__text">
-            <div className="booking__img mr-3">
+            <div className="booking__img">
               <img src={movieBookingPage.hinhAnh} alt={movieBookingPage.tenPhim} />
             </div>
             <div className="booking__text-infor">

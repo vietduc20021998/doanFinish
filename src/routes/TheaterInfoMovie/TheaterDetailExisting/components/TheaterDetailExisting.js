@@ -22,7 +22,7 @@ export default function TheaterDetailExisting(movieDetail) {
 
   return (
     <div className="theater__detail-existing">
-      <h1>Nội Dung Phim</h1>
+      <h1 className="theater__detail-h1">Nội Dung Phim</h1>
       <hr className="border-hr" />
       {
         _.map(movieDetail, (item, index) => (

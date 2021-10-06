@@ -19,7 +19,7 @@ export default function TheaterExisting({ movieExisting, getTotalCount }) {
 
   return (
     <div id="phimChieuRap" className="container mt-3">
-      <h1>Phim Chiếu Rạp</h1>
+      <h1 className="existing-h1">Phim Chiếu Rạp</h1>
       <hr className="border-hr" />
       <div className="format d-flex">
         {

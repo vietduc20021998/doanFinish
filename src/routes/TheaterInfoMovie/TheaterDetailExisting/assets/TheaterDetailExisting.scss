@@ -43,43 +43,78 @@ hr.border-hr {
     margin-top: 0;
   }
 
+  .theater__detail-h1 {
+    font-size: 2.5rem;
+
+    @include ip678plus {
+      margin-top: 10px;
+      font-size: 1.5rem;
+    }
+  }
+
   .movie {
 
-    .movie__format__button {
-      box-shadow: 1px 1px #000;
-      outline-color: rgb(255, 255, 255);
-      border: 1px;
-      border-radius: 5px;
-      padding: 0 5px;
-      color: #fff;
-      background-color: red;
-
-      @include ipadpro {
-        font-size: 20px;
+    .row {
+      @include ip678plus {
+        flex-direction: column;
       }
 
-      a {
-        text-decoration: none;
-        color: #fff;
-      }
-    }
-
-    .movie__pic {
-      width: 25%;
-      text-align: center;
-      
-      @include ipadpro {
-        height: 25vh;
-      }
-    }
-
-    p {
-      font-size: 20px;
-    }
+      .movie__pic {
+        width: 25%;
+        text-align: center;
+        
+        @include ipadpro {
+          height: 25vh;
+        }
   
-    .movie__text {
-      text-transform: uppercase;
+        img {
+          @include ip678plus {
+            width: 300px;
+            height: 400px;
+            margin-left: 20px;
+          }
+        }
+      }
+
+      .col-9 {
+        @include ip678plus {
+          max-width: 100%;
+        }
+        
+        .movie__text {
+          text-transform: uppercase;
+          
+          @include ip678plus {
+            font-size: 25px;
+            margin-top: 10px;
+          }
+        }
+
+        p {
+          font-size: 20px;
+        }
+
+        .movie__format__button {
+          box-shadow: 1px 1px #000;
+          outline-color: rgb(255, 255, 255);
+          border: 1px;
+          border-radius: 5px;
+          padding: 0 5px;
+          color: #fff;
+          background-color: red;
+    
+          @include ipadpro {
+            font-size: 20px;
+          }
+    
+          a {
+            text-decoration: none;
+            color: #fff;
+          }
+        }
+      }
     }
+
   
     .movie__theater {
       border-bottom: 1px solid #000;
@@ -91,6 +126,16 @@ hr.border-hr {
         height: 140px;
         margin: 0 10px;
         opacity: .8;
+
+        @include ipadpro {
+          width: 100px;
+          height: 100px;
+        }
+
+        @include ip678plus {
+          width: 70px;
+          height: 70px;
+        }
       }
   
       .active__hover {
@@ -148,18 +193,43 @@ hr.border-hr {
         @include ipadpro {
           margin: 0 0 20px 0;
         }
+        @include ip678plus {
+          margin: 0 0 20px 0;
+          padding: 0;
+        }
   
         .movie__time-pic {
           width: 100px;
-          height: 190px;
+          height: 100px;
 
-          @include ipadpro {
-            width: 100px;
-            height: 100px;
-            padding: 0 0 0 15px;
+          @include ip678plus {
+            max-width: 35%;
+          }
+          
+          img {
+            @include ipadpro {
+              width: 100px;
+              height: 100px;
+              padding: 0 0 0 15px;
+            }
+  
+            @include ip678plus {
+              width: 50px;
+              height: 50px;
+              padding-left: 0px;
+            }
           }
         }
-
+        
+        .col-9 {
+          
+          @include ip678plus {
+            max-width: 70%;
+            p {
+              font-size: 15px;
+            }
+          }
+        }
   
         .movie__time-button {
           margin-right: 10px;

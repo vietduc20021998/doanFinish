@@ -43,6 +43,14 @@ img {
         color: #fff;
         background-color: rgb(0, 0, 0);
         height: 25px;
+
+        @include ipadpro {
+          font-size: 15px;
+        }
+
+        @include ip678plus {
+          font-size: 10px;
+        }
       }
     }
   }
@@ -53,6 +61,12 @@ img {
     border-top: 7px solid red;
     border-bottom: 7px solid red;
     background-color: #fdf7dd;
+
+    .navbar-collapse {
+      @include ip678plus {
+        background-color: #434343;
+      }
+    }
   
     .bg__logo {
       display: block;
@@ -88,26 +102,61 @@ img {
       padding-bottom: 5px;
       display: flex;
       justify-content: center;
+      margin-left: 45vh;
       // position: fixed;
       // z-index: 2000;
     
       & > div:nth-child(4) {
         border-right: none;
       }
+
+      @include ipadpro {
+        margin-left: 17vh;
+      }
+
+      @include ip678plus {
+        margin-left: 0vh;
+        background-color: #434343;
+        padding-top: 10px
+      }
     
       .total__format__div {
         border-right: 1px solid #000;
         padding-right: 30px;
         padding-left: 30px;
+
+        @include ipadpro {
+          padding: 0 15px;
+        }
+
+        @include ip678plus {
+          text-align: center;
+          border: 1px solid #fff;
+          margin: 0 10px 5px 10px;
+          padding-top: 15px;
+        }
     
         .pic__1 {
           width: 10vh;
           height: 10vh;
           cursor: pointer;
+
+          @include ipadpro {
+            width: 7vh;
+            height: 7vh;
+          }
+
+          @include ip678plus {
+            display: inline-block;
+          }
       
           .pic__format {
             border: 1px solid #000;
             border-radius: 20%;
+
+            @include ip678plus {
+              border: 1px solid #fff;
+            }
           }
       
         }
@@ -119,6 +168,10 @@ img {
     
           @include ipadpro {
             font-size: 20px;
+          }
+
+          @include ip678plus {
+            color: #fff;
           }
         }
       }

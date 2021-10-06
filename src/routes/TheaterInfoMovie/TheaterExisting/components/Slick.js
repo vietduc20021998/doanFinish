@@ -28,6 +28,14 @@ export default function Slick({ movieSlick }) {
         }
       },
       {
+        breakpoint: 414,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 2,
+          rows: 1
+        }
+      },
+      {
         breakpoint: 576,
         settings: {
           slidesToShow: 1,
@@ -40,7 +48,7 @@ export default function Slick({ movieSlick }) {
 
   return (
     <div className="container mt-3">
-      <h1>PHIM HOT</h1>
+      <h1 className="slick-h1">PHIM HOT</h1>
       <hr className="border-hr" />
       <div className="d-flex slick-bg">
         <Slider ref={ref} {...settings} className="container">

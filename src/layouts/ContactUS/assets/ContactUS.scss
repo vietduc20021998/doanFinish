@@ -5,9 +5,6 @@ img {
   width: 100%;
 }
 
-
-
-
 //Carousel
 .bg__carousel {
   margin-top: 20px;
@@ -21,6 +18,16 @@ img {
   @include ipadpro {
     height: 30vh;
     width: 100%;
+  }
+
+  @include ip678plus {
+    margin-top: 0px;
+  }
+
+  .carousel-control-prev, .carousel-control-next {
+    @include ip678plus {
+      display: none;
+    }
   }
   
   .bg__carousel-inner {

@@ -11,8 +11,14 @@ img {
     display: none!important;
   }
 }
-.hr.border-hr {
+hr.border-hr {
   border: 2px solid #000;
+}
+
+h1.slick-h1 {
+  @include ip678plus {
+    font-size: 1.5rem;
+  }
 }
 
 .slick-bg {
@@ -27,8 +33,13 @@ img {
       height: 300px;
 
       @include ipadpro {
-        width: 300px;
+        width: 290px;
         height: 400px;
+      }
+
+      @include ip678plus {
+        width: 170px;
+        height: 230px;
       }
 
       .slick__format__img {
@@ -48,6 +59,10 @@ img {
       @include ipadpro {
         font-size: 30px;
       }
+
+      @include ip678plus {
+        font-size: 15px;
+      }
     }
 
     .slick__format__button {
@@ -63,6 +78,11 @@ img {
       @include ipadpro {
         font-size: 25px;
         padding: 0 10px;
+      }
+
+      @include ip678plus {
+        font-size: 15px;
+        padding: 0 5px;
       }
     }
   }

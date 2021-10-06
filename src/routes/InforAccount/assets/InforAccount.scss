@@ -1,5 +1,27 @@
 @import 'assets/mixin.scss';
 
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 5px grey; 
+  border-radius: 10px;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: rgb(8, 8, 8); 
+  border-radius: 10px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: #000000; 
+}
+
 //Account Container
 .accCon {
   margin-top: 25vh;
@@ -12,12 +34,21 @@
     margin-left: 50px!important;
   }
 
+  @include ip678plus {
+    display: block;
+    margin-left: 110px!important;
+  }
+
   .accCon__nav {
     text-align: right;
     // border-right: 1px solid #000;
 
     @include ipadpro {
       border: none;
+    }
+
+    @include ip678plus {
+      text-align: center;
     }
 
     a.nav-link.active {
@@ -41,6 +72,14 @@
         width: 230px;
         z-index: 100;
       }
+
+      @include ip678plus {
+        padding-left: 25px;
+        font-size: 15px;
+        width: 100%;
+        text-align: center;
+        z-index: 100;
+      }
     }
   }
 }
@@ -49,6 +88,10 @@
 .in4Account {
   margin-left: 20px;
   text-align: -webkit-center;
+
+  @include ip678plus {
+    margin-left: -70px;
+  }
 
   .in4Account__form {
     margin-bottom: 10px;
@@ -59,6 +102,14 @@
     @include ipadpro {
       .form-control {
         font-size: 25px;
+      }
+    }
+
+    @include ip678plus {
+      width: 300px;
+
+      .form-control {
+        font-size: 15px;
       }
     }
   }
@@ -78,6 +129,11 @@
     @include ipadpro {
       font-size: 25px;
     }
+
+    @include ip678plus {
+      font-size: 15px;
+      width: 300px;
+    }
   }
 }
 
@@ -86,6 +142,10 @@
 .changePw {
   margin-left: 20px;
   text-align: -webkit-center;
+
+  @include ip678plus {
+    margin-left: -70px;
+  }
 
   .changePw__form {
     margin-bottom: 10px;
@@ -96,6 +156,14 @@
     @include ipadpro {
       .form-control {
         font-size: 25px;
+      }
+    }
+
+    @include ip678plus {
+      width: 300px;
+
+      .form-control {
+        font-size: 15px;
       }
     }
   }
@@ -115,20 +183,40 @@
     @include ipadpro {
       font-size: 25px;
     }
+
+    @include ip678plus {
+      font-size: 15px;
+      width: 300px;
+    }
   }
 }
 
 //List Booking
+
 .list__booked-div {
   margin-left: 100px;
   margin-right: 30px;
+  
+  @include ip678plus {
+    
+  }
 
-  @include ipadpro {
-    // font-size: 20px;
+  @include ip678plus {
+    margin-left: -120px;
+    margin-right: -100px;
+    overflow-x: scroll;
   }
 
   .listBooked__table-tr {
     box-shadow: 1px 1px #000;
+
+    @include ipadpro {
+      font-size: 20px;
+    }
+
+    @include ip678plus {
+      font-size: 12px;
+    }
 
     th {
       @include ipadpro {
@@ -136,15 +224,46 @@
       }
     }
   
+    th:nth-child(1) {
+
+      @include ip678plus {
+        min-width: 100px;
+      }
+    }
+    th:nth-child(2) {
+      min-width: 100px;
+
+      @include ip678plus {
+        min-width: 50px;
+      }
+    }
+    th:nth-child(4) {
+      min-width: 70px;
+
+      @include ip678plus {
+        min-width: 100px;
+      }
+    }
     th:nth-child(6) {
       min-width: 100px;
+
+      @include ip678plus {
+        min-width: 70px;
+      }
     }
     th:nth-child(7) {
       min-width: 100px;
+
+      @include ip678plus {
+        min-width: 100px;
+      }
     }
   }
   
   .listBooked__tbody-tr {
+    @include ip678plus {
+      font-size: 12px;
+    }
   
     td:nth-child(6) {
       max-width: 150px;

@@ -16,6 +16,7 @@ import AddScheduleContainer from './routes/Admin/modules/FormatFilm/containers/A
 import UsersList from './routes/Admin/modules/Users/containers/UsersListContainers'
 import AddUsersContainer from './routes/Admin/modules/Users/containers/AddUsersContainer'
 import EditUsersContainer from './routes/Admin/modules/Users/containers/EditUsersContainer'
+import ScrollToTop from './routes/Components/ScrollToTop/ScrollToTop'
 
 import axios from 'helpers/axios'
 import { useEffect } from 'react'
@@ -32,6 +33,7 @@ function App() {
 
   return (
     <DuckRouter>
+      <ScrollToTop />
       <Switch>
         <Route
           path='/admin'

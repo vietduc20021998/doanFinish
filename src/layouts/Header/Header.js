@@ -57,61 +57,48 @@ export default function Header() {
       </div>
 
       <div className="bg__color">
-        <nav className="container navbar navbar-expand-lg navbar-light w-75 mx-auto d-flex justify-content-between">
-          <div>
-            <Link className="bg__logo navbar-brand" to="/">
-              <img src={logo} alt='logo' />
-            </Link>
-          </div>
-          <div>
-            <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-              <span className="navbar-toggler-icon" />
-            </button>
-            <div className="collapse navbar-collapse" id="navbarSupportedContent">
-              <ul className="total__format navbar-nav mr-auto bg__nav__font">
-                <li className="nav-item active">
-                  <div className="total__format__div">
-                    <div className="pic__1">
-                      <LinkScroll activeClass="active" to="cumRap" spy={true} smooth={true} duration={500} >
-                        <img className="pic__format" src={cinema} alt='cinema' />
-                      </LinkScroll>
-                    </div>
-                    <p className="pic__text">CỤM RẠP</p>
+        <nav className="container navbar navbar-expand-lg navbar-light w-75">
+          <Link className="bg__logo navbar-brand" to="/">
+            <img src={logo} alt='logo' />
+          </Link>
+          <button className="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span className="navbar-toggler-icon" />
+          </button>
+          <div className="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul className="total__format navbar-nav mr-auto bg__nav__font">
+              <li className="nav-item active">
+                <div className="total__format__div">
+                  <div className="pic__1">
+                    <LinkScroll activeClass="active" to="cumRap" spy={true} smooth={true} duration={500} >
+                      <img className="pic__format" src={cinema} alt='cinema' />
+                    </LinkScroll>
                   </div>
-                </li>
+                  <p className="pic__text">CỤM RẠP</p>
+                </div>
+              </li>
 
-                <li className="nav-item active">
-                  <div className="total__format__div">
-                    <div className="pic__1">
-                      <LinkScroll activeClass="active" to="phimChieuRap" spy={true} smooth={true} duration={500} >
-                        <img className="pic__format" src={nowShowing} alt='nowShowing' />
-                      </LinkScroll>
-                    </div>
-                    <p className="pic__text">PHIM</p>
+              <li className="nav-item active">
+                <div className="total__format__div">
+                  <div className="pic__1">
+                    <LinkScroll activeClass="active" to="phimChieuRap" spy={true} smooth={true} duration={500} >
+                      <img className="pic__format" src={nowShowing} alt='nowShowing' />
+                    </LinkScroll>
                   </div>
-                </li>
+                  <p className="pic__text">PHIM</p>
+                </div>
+              </li>
 
-                <li className="nav-item active">
-                  <div className="total__format__div">
-                    <div className="pic__1">
-                      <LinkScroll activeClass="active" to="lienHe" spy={true} smooth={true} duration={500} >
-                        <img className="pic__format" src={contact} alt='contact' />
-                      </LinkScroll>
-                    </div>
-                    <p className="pic__text">LIÊN HỆ</p>
+              <li className="nav-item active">
+                <div className="total__format__div">
+                  <div className="pic__1">
+                    <LinkScroll activeClass="active" to="lienHe" spy={true} smooth={true} duration={500} >
+                      <img className="pic__format" src={contact} alt='contact' />
+                    </LinkScroll>
                   </div>
-                </li>
-
-                {/* <li className="nav-item active">
-                  <div className="total__format__div">
-                    <div className="pic__1" onClick={() => history.push('user/Register')} >
-                      <img className="pic__format" src={REGISTER} alt='REGISTER' />
-                    </div>
-                    <p className="pic__text">ĐĂNG KÝ</p>
-                  </div>
-                </li> */}
-              </ul>
-            </div>
+                  <p className="pic__text">LIÊN HỆ</p>
+                </div>
+              </li>
+            </ul>
           </div>
         </nav>
       </div>

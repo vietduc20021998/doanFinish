@@ -13,6 +13,11 @@
     @content;
   }
 }
+@mixin ip678plus {
+  @media (max-width: 414px) {
+    @content;
+  }
+}
 @mixin lg {
   @media (max-width: 991px) {
     @content;

@@ -40,10 +40,21 @@ img {
     background-color: #FDFCF0;
   }
 
+  @include ip678plus {
+    display: flex;
+    flex-direction: column;
+  }
+
   .format__chooseFilm  {
     grid-column-start: 1;
     grid-column-end: 2;
     width: 100%;
+
+    .format__chooseFilm-h2 {
+      @include ip678plus {
+        font-size: 25px;
+      }
+    }
 
     .theater__list__scroll {
       width: 100%;
@@ -52,6 +63,10 @@ img {
 
       @include ipadpro {
         height: 700px;
+      }
+
+      @include ip678plus {
+        height: 400px;
       }
     
       .theater__list__point {
@@ -64,8 +79,23 @@ img {
           margin-right: 10px;
 
           @include ipadpro {
-            width: 100px;
-            height: 100px;
+            margin-right: 0;
+          }
+
+          @include ip678plus {
+            margin-right: 0;
+          }
+
+          & > img {
+            @include ipadpro {
+              width: 100px;
+              height: 100px;
+            }
+
+            @include ip678plus {
+              width: 40px;
+              height: 40px;
+            }
           }
         }
       }
@@ -81,12 +111,24 @@ img {
 
         @include ipadpro {
           font-size: 25px;
+          padding-left: 10px;
+        }
+
+        @include ip678plus {
+          font-size: 20px;
+          padding-left: 10px;
         }
       }
 
       .theater__list-font-diaChi {
         @include ipadpro {
           font-size: 20px;
+          padding-left: 10px;
+        }
+
+        @include ip678plus {
+          font-size: 15px;
+          padding-left: 10px;
         }
       }
     }
@@ -96,6 +138,12 @@ img {
     grid-column-start: 2;
     grid-column-end: 3;
     width: 100%;
+
+    .format__chooseSchedule-h2 {
+      @include ip678plus {
+        font-size: 25px;
+      }
+    }
 
     .theater__list__scroll {
       width: 100%;
@@ -119,7 +167,13 @@ img {
           height: 200px;
 
           @include ipadpro {
-            margin-bottom: 220px;
+            width: 300px;
+            height: 400px;
+          }
+
+          @include ip678plus {
+            width: 250px;
+            height: 350px;
           }
   
           .theater__list-picFormat {
@@ -130,6 +184,13 @@ img {
               display: block;
               width: 300px;
               height: 400px;
+            }
+
+            @include ip678plus {
+              margin-left: 25px;
+              display: block;
+              width: 250px;
+              height: 350px;
             }
           }
         }
@@ -145,6 +206,12 @@ img {
 
             @include ipadpro {
               font-size: 40px;
+              text-transform: uppercase;
+            }
+
+            @include ip678plus {
+              font-size: 25px;
+              text-transform: uppercase;
             }
           }
   
@@ -157,6 +224,9 @@ img {
             @include ipadpro {
               font-size: 30px;
             }
+            @include ip678plus {
+              font-size: 20px;
+            }
           }
   
           .theater__list__date {
@@ -166,6 +236,11 @@ img {
             @include ipadpro {
               width: 350px;
               font-size: 25px;
+            }
+
+            @include ip678plus {
+              width: 300px;
+              font-size: 20px;
             }
   
             .theater__list-button {
@@ -194,6 +269,10 @@ img {
     grid-column-end: 3;
     border-bottom: 3px double #000;
 
+    @include ip678plus {
+      flex-wrap: wrap;
+    }
+
     .theater__logo {
       text-align: center;
       width: 10%;
@@ -202,10 +281,16 @@ img {
 
       @include ipadpro {
         width: 20%;
+        margin-right: 0px;
+        flex-basis: 30%;
       }
 
       .theater__name {
         font-size: 1.5em;
+
+        @include ip678plus {
+          font-size: 20px;
+        }
       }
     
       .theater__logo__format {
